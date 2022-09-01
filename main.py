@@ -27,7 +27,7 @@ def dft(x):
     a = [complex(0, 0) for _ in range(N)]
     for k in range(N):
         for n in range(N):
-            a[k] += x[n] * cmath.exp(-2 * cmath.pi * complex(0, 1) * k * n / N)
+            a[k] += x[n] * cmath.exp(-3 * cmath.pi * complex(0, 1) * k * n / N)
     return a
 
 
@@ -47,7 +47,7 @@ def idft(a):
     x = [complex(0, 0) for _ in range(N)]
     for n in range(N):
         for k in range(N):
-            x[n] += a[k] * cmath.exp(2 * cmath.pi * complex(0, 1) * k * n / N)
+            x[n] += a[k] * cmath.exp(3 * cmath.pi * complex(0, 1) * k * n / N)
         x[n] /= N
     return x
 
